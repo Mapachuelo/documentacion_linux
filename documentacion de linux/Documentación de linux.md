@@ -1,0 +1,1 @@
+Este documento va estar guardado funciones de linux que he aprendido a lo largo de tiempo

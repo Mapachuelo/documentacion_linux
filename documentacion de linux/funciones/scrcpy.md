@@ -1,0 +1,1 @@
+La función principal de scrcpy es tomar video en tiempo real al celular conectado y poder verlo en el ordenador
