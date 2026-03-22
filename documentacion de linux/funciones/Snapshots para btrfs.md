@@ -44,6 +44,12 @@ El nombre que le va colocar
 ``/.snapshots/root-$(date +%Y-%m-%d-%H%M)
 Con sus datos de año, mes, día y hora
 
+Si uno quiere solo crear un snapshots de solo lectura hay que colocarle el parametro ``-r
+un ejemplo
+```
+sudo btrfs subvolume snapshot -r / /.snapshots/root-2026-03-16
+```
+
 ## Borrar un snapshots
 Primero debe ver la ruta que ha creado un snapshots.
 ```
@@ -68,4 +74,44 @@ o con:
 ```
 sudo btrfs subvolume list /.snapshots
 ```
+
+### Borrar snapshots viejos
+Entre un rango de 5 - 10 snapshots se van a conservar y los viejos se borraran.
+```
+ls -t /.snapshots
+```
+
+## Ir a otros snapshots
+Antes de eso cree una copia de seguridad antes de hacerlo.
+
+1. Montar el disco
+```
+sudo mount -o subvol=@ /dev/nvme0n1p4 /mnt
+```
+2. Borrar el sistema actual
+```
+sudo btrfs subvolume delete /mnt/@
+```
+3. Restaurar snapshot
+```
+sudo btrfs subvolume snapshot /mnt/@snapshots/root-2026-03-22-1207 /mnt/@
+```
+4. reinicia el sistema. 
+```
+reboot
+```
+
+## Ver el uso real de cada snapshots
+Muestra todo snapshots creados por uno mismo y ver cuanto pesa.
+```
+sudo btrfs filesystem du -s /.snapshots/*
+```
+
+Un ejemplo que significa lo que le aparece al ejecutar el comando en la terminal.
+
+| Columna    | Significado                                        |
+| ---------- | -------------------------------------------------- |
+| Total      | tamaño total del subvolumen si estuviera solo      |
+| Exclusive  | espacio **real que solo usa ese snapshot**         |
+| Set shared | datos compartidos con otros snapshots o el sistema |
 
