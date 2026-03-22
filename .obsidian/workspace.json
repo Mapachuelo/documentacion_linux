@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentacion de linux/funciones/Repositorios en arch linux.md",
+                "file": "documentacion de linux/funciones/Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Repositorios en arch linux"
+              "title": "Git"
             }
           }
         ]
@@ -185,10 +185,10 @@
   },
   "active": "dbb1eedbe7c04cbd",
   "lastOpenFiles": [
-    "documentacion de linux/funciones/Moonlight y sunchine.md",
     "documentacion de linux/funciones/Copilar mesa sin instalar al sistema.md",
-    "documentacion de linux/funciones/Snapshots para btrfs.md",
+    "documentacion de linux/funciones/Moonlight y sunchine.md",
     "documentacion de linux/funciones/Repositorios en arch linux.md",
+    "documentacion de linux/funciones/Snapshots para btrfs.md",
     "documentacion de linux/Documentación de linux.md",
     "README.md"
   ]
