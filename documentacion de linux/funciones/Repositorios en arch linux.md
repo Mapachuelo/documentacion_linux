@@ -24,4 +24,15 @@ Server = https://us.mirrors.cicku.me/archlinux/$repo/os/$arch
 Server = https://mirror.clarkson.edu/archlinux/$repo/os/$arch
 Server = https://mirror.colonelhosting.com/archlinux/$repo/os/$arch
 ```
-Los servidores se puede mezclar, recomendarías siempre utilizar los enlaces **https y no **http
+Los servidores se puede mezclar, recomendarías siempre utilizar los enlaces **https y no **http.
+
+Para agregar los enlaces de los servidores:
+```
+sudo nvim /etc/pacman.d/mirrorlist
+```
+puede utilizar nvim o nano o vim, su editor preferido.
+
+Solo ver que servidores tiene:
+```
+cat /etc/pacman.d/mirrorlist
+```
