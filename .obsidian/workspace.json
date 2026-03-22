@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentacion de linux/funciones/Copilar mesa sin instalar al sistema.md",
+                "file": "documentacion de linux/funciones/Repositorios.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Copilar mesa sin instalar al sistema"
+              "title": "Repositorios"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "dbb1eedbe7c04cbd",
   "lastOpenFiles": [
-    "documentacion de linux/funciones/Snapshots para btrfs.md",
+    "documentacion de linux/funciones/Moonlight y sunchine.md",
     "documentacion de linux/funciones/Copilar mesa sin instalar al sistema.md",
+    "documentacion de linux/funciones/Snapshots para btrfs.md",
     "documentacion de linux/funciones/Repositorios.md",
     "documentacion de linux/Documentación de linux.md",
     "README.md"

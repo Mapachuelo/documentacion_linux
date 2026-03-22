@@ -12,13 +12,20 @@ Server = https://mirrors.atlas.net.co/archlinux/$repo/os/$arch
 Server = http://mirrors.atlas.net.co/archlinux/$repo/os/$arch
 
 
+
 ## United States
 Server = https://mirror.adectra.com/archlinux/$repo/os/$arch
+
 Server = https://mirror.akane.network/archmirror/$repo/os/$arch
+
 Server = https://mirror.arizona.edu/archlinux/$repo/os/$arch
+
 Server = https://arlm.tyzoid.com/$repo/os/$arch
+
 Server = https://mirrors.bloomu.edu/archlinux/$repo/os/$arch
+
 Server = https://arch-mirror.brightlight.today/$repo/os/$arch
+
 Server = https://mirror.us.cdn-perfprod.com/archlinux/$repo/os/$arch
 Server = https://us.mirrors.cicku.me/archlinux/$repo/os/$arch
 Server = https://mirror.clarkson.edu/archlinux/$repo/os/$arch
@@ -61,26 +68,49 @@ Server = https://arch.mirror.marcusspencer.us:4443/archlinux/$repo/os/$arch
 Server = https://arch.miningtcup.me/$repo/os/$arch
 Server = https://mirrors.shr.cx/arch/$repo/os/$arch
 Server = https://iad.mirrors.misaka.one/archlinux/$repo/os/$arch
+
 Server = https://mirrors.mit.edu/archlinux/$repo/os/$arch
+
 Server = https://mirror.mra.sh/archlinux/$repo/os/$arch
+
 Server = https://us.arch.niranjan.co/$repo/os/$arch
+
 Server = https://mirrors.ocf.berkeley.edu/archlinux/$repo/os/$arch
+
 Server = https://archmirror1.octyl.net/$repo/os/$arch
+
 Server = https://ftp.osuosl.org/pub/archlinux/$repo/os/$arch
+
 Server = https://mirror.pilotfiber.com/archlinux/$repo/os/$arch
+
 Server = https://dfw.mirror.rackspace.com/archlinux/$repo/os/$arch
+
 Server = https://iad.mirror.rackspace.com/archlinux/$repo/os/$arch
+
 Server = https://ord.mirror.rackspace.com/archlinux/$repo/os/$arch
+
 Server = https://plug-mirror.rcac.purdue.edu/archlinux/$repo/os/$arch
+
 Server = https://mirrors.rit.edu/archlinux/$repo/os/$arch
+
 Server = https://mirrors.smeal.xyz/arch-linux/$repo/os/$arch
+
+
 Server = https://mirrors.sonic.net/archlinux/$repo/os/$arch
 Server = https://us-mnz.soulharsh007.dev/archlinux/$repo/os/$arch
+
 Server = https://mirror.pit.teraswitch.com/archlinux/$repo/os/$arch
+
 Server = https://mirror.theash.xyz/arch/$repo/os/$arch
+
 Server = https://mirror.umd.edu/archlinux/$repo/os/$arch
+
 Server = https://mirrors.vectair.net/archlinux/$repo/os/$arch
+
 Server = https://mirrors.xtom.com/archlinux/$repo/os/$arch
+
 Server = https://yonderly.org/mirrors/archlinux/$repo/os/$arch
+
 Server = https://mirror.zackmyers.io/archlinux/$repo/os/$arch
+
 Server = https://zxcvfdsa.com/arch/$repo/os/$arch
