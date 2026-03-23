@@ -1,10 +1,10 @@
 Una guía para tener moonligth y sunchine en el cual el host tenga la pantalla del monitor apagada en linux.
 ## Dependencias
 evdi  
-linux-zen-headers  -->  los haders del kernel que utilices
+``linux-zen-headers  -->  los haders del kernel que utilices
 
 ## ejecutar
- hyprctl output create headless "fantasma"
+hyprctl output create headless "fantasma"
 hyprctl monitors
 
 #### Cargar el módulo al arrancar el sistema

@@ -37,28 +37,16 @@ VK_ICD_FILENAMES=/home/mapachuelo/Juegos/mesa_test/share/vulkan/icd.d/intel_icd.
 Dependencias necesarias  - falta
 ```
 glslang-tools
-
 python3-pyyaml
-
 python3-mako
-
 libdrm
-
 libclc-<version>
-
 llvm-<version>
-
 libllvmspirvlib-<version>
-
 libclang-<version>
-
 byacc (or) bison
 
 flex
-
-
-
-
 
 # Wayland
 libwayland
