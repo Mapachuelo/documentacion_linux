@@ -23,3 +23,15 @@ git fetch --all --prune
 git fetch
 ```
 
+
+
+
+Errores
+
+fatal: La rama actual arreglos/modulos no tiene una rama upstream.
+Para empujar la rama actual y configurar el remoto como upstream, usa
+
+    git push --set-upstream Musync arreglos/modulos
+
+Para hacer que esto pase automáticamente para las ramas que no rastrean
+un upstream, mira 'push.autoSetupRemote' en 'git help config'.
