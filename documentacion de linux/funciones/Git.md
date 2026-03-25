@@ -23,7 +23,16 @@ git fetch --all --prune
 git fetch
 ```
 
+## Cambia de rama
+Una vez que confirmes que la rama aparece en la lista, puedes moverte a ella.
+```
+git checkout nombre-de-la-rama
+```
 
+**Si la rama solo existe en el remoto:** Al ejecutar el siguiente comando, Git creará automáticamente una copia local que siga a la del servidor:
+```
+git checkout -t origin/nombre-de-la-rama
+```
 
 
 Errores
