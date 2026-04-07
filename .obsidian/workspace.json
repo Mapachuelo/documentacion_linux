@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "be6b92ddbb0b28bf",
+        "id": "478587efa371dc85",
         "type": "tabs",
         "children": [
           {
-            "id": "dbb1eedbe7c04cbd",
+            "id": "c30e7ce1ceff99aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,16 +183,16 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "dbb1eedbe7c04cbd",
+  "active": "c30e7ce1ceff99aa",
   "lastOpenFiles": [
-    "documentacion de linux/funciones/Cambiar la calidad.md",
     "documentacion de linux/funciones/Copilar mesa sin instalar al sistema.md",
+    "documentacion de linux/Documentación de linux.md",
+    "documentacion de linux/funciones/Snapshots para btrfs.md",
     "documentacion de linux/funciones/Git.md",
     "documentacion de linux/funciones/Moonlight y sunchine.md",
+    "documentacion de linux/funciones/Cambiar la calidad.md",
     "documentacion de linux/funciones/Repositorios en arch linux.md",
     "documentacion de linux/funciones/scrcpy.md",
-    "documentacion de linux/funciones/Snapshots para btrfs.md",
-    "documentacion de linux/Documentación de linux.md",
     "README.md"
   ]
 }

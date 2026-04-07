@@ -10,6 +10,10 @@ git switch "nombre de la rama"
 ```
 git branch -D "nombre de la rama"
 ```
+### Borrar rama remota
+```bash
+git push origen --delete nombre-de-la-rama
+```
 ### Para crear una rama nueva y saltar a ella de inmediato:  
 ```
 git switch -c nueva-rama
