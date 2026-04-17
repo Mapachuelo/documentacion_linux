@@ -5,8 +5,10 @@ Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre
 ## Script de instalación 
 Para instalar el script, se debe ejecutar el siguiente comando en la terminal:
 
+Solo esta disponible para arch linux
+
 ```bash
-curl -o install.sh https://github.com/Mapachuelo/documentacion_linux.git/install.sh
+wget https://raw.githubusercontent.com/Mapachuelo/documentacion_linux/main/instalacion.sh
 chmod +x install.sh
 ./install.sh
 ```
