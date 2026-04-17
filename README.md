@@ -7,10 +7,10 @@ Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre
 ## Script de instalación 
 Para instalar el script, se debe ejecutar el siguiente comando en la terminal:
 
-Solo esta disponible para arch linux
+Solo esta disponible para arch linux y solo verificado para las intel arc.
 
 ```bash
-wget https://raw.githubusercontent.com/Mapachuelo/documentacion_linux/main/instalacion.sh
+wget https://raw.githubusercontent.com/Mapachuelo/documentacion_linux/main/install.sh
 chmod +x install.sh
 ./install.sh
 ```
