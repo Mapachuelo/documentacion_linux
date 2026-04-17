@@ -11,9 +11,9 @@ read -r respuesta
 
 if [[ "$respuesta" == "s" || "$respuesta" == "S" ]]; then
 
-  echo "instalación de red"
+  echo "instalación de red y complementos"
   sudo pacman -S --noconfirm --needed \
-  networkmanager dnsmasq
+  networkmanager dnsmasq wget curl
 
   sudo systemctl enable NetworkManager
   sudo systemctl start NetworkManager
