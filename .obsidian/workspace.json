@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentacion_linux/funciones/fish.md",
+                "file": "documentacion_linux/funciones/flatpak.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "fish"
+              "title": "flatpak"
             }
           }
         ]
@@ -185,13 +185,18 @@
   },
   "active": "c30e7ce1ceff99aa",
   "lastOpenFiles": [
+    "instalacion.sh~",
+    "instalacionv2.sh~",
+    "instalacionv2.sh",
+    "documentacion_linux/funciones/gamescope.md",
+    "documentacion_linux/funciones/flatpak.md",
+    "documentacion_linux/funciones/fish.md",
     "documentacion_linux/funciones/dualboot.md",
     "documentacion_linux/funciones/Davinci_resolve.md",
     "documentacion_linux/funciones/Copilar_mesa_sin_instalar_al_sistema.md",
     "documentacion_linux/funciones/Cambiar_la_calidad_de_audio.md",
     "documentacion_linux/funciones/android_tools.md",
     "documentacion_linux/funciones/agregar_discos_externos.md",
-    "instalacion.sh~",
     "documentacion_linux/funciones/Agregar_discos_externos.md",
     "documentacion_linux/funciones/agregar_discos_externos.md~",
     "documentacion_linux/funciones/agregar discos externos como inicio automatico.md",
@@ -200,8 +205,6 @@
     "documentacion_linux/funciones/Repositorios en arch linux.md",
     "documentacion_linux/funciones/Snapshots para btrfs.md",
     "documentacion_linux/Readme_documentacion.md~",
-    "documentacion_linux/funciones/fish.md",
-    "documentacion_linux/funciones/flatpak.md",
     "documentacion_linux/funciones/onedrive.md",
     "README.md~",
     "documentacion_linux/Readme_documentacion.md",
@@ -209,7 +212,6 @@
     "documentacion_linux/funciones/Moonlight y sunchine.md",
     "documentacion_linux/funciones/internet.md",
     "documentacion de linux/funciones/Sin nombre",
-    "documentacion_linux/funciones/gamescope.md",
     "documentacion_linux/Documentación de linux.md",
     "documentacion_linux/funciones/Git.md",
     "README.md"

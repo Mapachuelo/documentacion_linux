@@ -46,7 +46,6 @@ if [[ "$respuesta" == "s" || "$respuesta" == "S" ]]; then
     sudo pacman -S --noconfirm --needed \
     xorg-xwayland xorg-xeyes xorg-xlsclients
 
-  else
     echo "No se instalaran los paquetes de desarrollo automatico"
 
   echo "¿Desea cambiar de terminal shell de bash a fish ? (s/n)" 
