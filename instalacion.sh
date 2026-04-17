@@ -115,8 +115,7 @@ if [[ "$respuesta" == "s" || "$respuesta" == "S" ]]; then
       net.pcsx2.PCSX2 \
       flathub net.rpcs3.RPCS3 \
       net.shadps4.shadPS4 \
-      com.heroicgameslauncher.hgl \
-      moe.launcher.the-honkers-railway-launcher
+      com.heroicgameslauncher.hgl 
 
     else 
       echo "No se instalaran emuladores mediante flatpak"

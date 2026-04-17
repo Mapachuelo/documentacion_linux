@@ -186,6 +186,7 @@
   "active": "c30e7ce1ceff99aa",
   "lastOpenFiles": [
     "install.sh~",
+    "instalacion.sh~",
     "documentacion_linux/funciones/Snapshots para btrfs.md",
     "documentacion_linux/funciones/agregar_discos_externos.md",
     "documentacion_linux/funciones/android_tools.md",
@@ -194,7 +195,6 @@
     "documentacion_linux/funciones/Davinci_resolve.md",
     "documentacion_linux/funciones/flatpak.md",
     "install.sh",
-    "instalacion.sh~",
     "instalacionv2.sh~",
     "instalacionv2.sh",
     "documentacion_linux/funciones/gamescope.md",
