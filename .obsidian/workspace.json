@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentacion_linux/funciones/onedrive.md",
+                "file": "documentacion_linux/funciones/Cambiar la calidad.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "onedrive"
+              "title": "Cambiar la calidad"
             }
           }
         ]
@@ -183,8 +183,16 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "c30e7ce1ceff99aa",
+  "active": "9ee03b6d28a47f7a",
   "lastOpenFiles": [
+    "documentacion_linux/Readme_documentacion.md~",
+    "documentacion_linux/funciones/Copilar mesa sin instalar al sistema.md",
+    "documentacion_linux/funciones/Davinci resolve.md",
+    "documentacion_linux/funciones/dualboot.md",
+    "documentacion_linux/funciones/fish.md",
+    "documentacion_linux/funciones/flatpak.md",
+    "documentacion_linux/funciones/agregar discos externos como inicio automatico.md",
+    "documentacion_linux/funciones/onedrive.md",
     "README.md~",
     "documentacion_linux/Readme_documentacion.md",
     "instalacion.sh~",
@@ -192,21 +200,14 @@
     "documentacion_linux/funciones/Moonlight y sunchine.md",
     "documentacion_linux/funciones/internet.md",
     "documentacion_linux/funciones/Repositorios en arch linux.md",
-    "documentacion_linux/funciones/onedrive.md",
     "documentacion_linux/funciones/scrcpy.md",
     "documentacion_linux/funciones/Snapshots para btrfs.md",
     "documentacion_linux/funciones/android tools.md",
-    "documentacion_linux/funciones/fish.md",
-    "documentacion_linux/funciones/dualboot.md",
     "documentacion_linux/funciones/hyprland.md",
-    "documentacion_linux/funciones/Davinci resolve.md",
     "documentacion de linux/funciones/Sin nombre",
-    "documentacion_linux/funciones/agregar discos externos como inicio automatico.md",
     "documentacion_linux/funciones/gamescope.md",
-    "documentacion_linux/funciones/flatpak.md",
     "documentacion_linux/Documentación de linux.md",
     "documentacion_linux/funciones/Git.md",
-    "documentacion_linux/funciones/Copilar mesa sin instalar al sistema.md",
     "documentacion_linux/funciones/Cambiar la calidad.md",
     "README.md"
   ]
