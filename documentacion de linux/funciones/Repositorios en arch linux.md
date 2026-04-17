@@ -1,5 +1,23 @@
 Para agregar lista de servidores de repositorios oficiales de arch linux, la función es mejorar la descarga de paquetes a la hora de instalar o actualizar, los servidores dependen.
 
+## habilitar repositorio multilib
+
+```
+sudo vim /etc/pacman.conf
+```
+
+y agregar este comando en la parte inferior con otros respositorios
+
+```
+sudo vim /etc/pacman.conf
+```
+
+
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
 Sitio oficial para sacar los enlaces
 https://archlinux.org/mirrorlist/?country=EU
 
