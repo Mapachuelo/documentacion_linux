@@ -139,6 +139,7 @@ if [ "$modo_inst" == "1" ]; then
     packeges_personalized
     packeges_flatpak
     shell_fish
+    packeges_dualboot
     echo "Instalación automática completada."
 
 elif [ "$modo_inst" == "2" ]; then
