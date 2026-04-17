@@ -2,7 +2,7 @@
 
 Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre y no se me olvide XD. 
 
-[Documentación sobre linux](documentacion\ de\ linux/documentación_linux.md)
+[Documentación sobre linux](documentacion_linux/Readme_documentacion.md)
 
 ## Script de instalación 
 Para instalar el script, se debe ejecutar el siguiente comando en la terminal:
