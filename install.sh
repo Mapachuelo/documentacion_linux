@@ -36,7 +36,7 @@ cahyos_games(){
   echo "Instalando cachyos-games repo"
   sudo pacman -S --noconfirm --needed \
   cachyos-hello cachyos-gaming-meta cachyos-gaming-applications \
-  heroic-games-launcher-bin 
+  heroic-games-launcher-bin chwd
 }
 
 shell_fish(){
