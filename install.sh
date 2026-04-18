@@ -35,13 +35,13 @@ cachyos(){
 cahyos_games(){
   echo "Instalando cachyos-games repo"
   sudo pacman -S --noconfirm --needed \
-  cachyos-hello cachyos-gaming-meta cachyos-gaming-applications 
-    heroic-games-launcher-bin 
+  cachyos-hello cachyos-gaming-meta cachyos-gaming-applications \
+  heroic-games-launcher-bin 
 }
 
 shell_fish(){
   echo "Instalando de shell en la terminal"
-  sudo pacman -Sy --noconfirm --needed fish
+  sudo pacman -S --noconfirm --needed fish
   chsh -s /usr/bin/fish
 }
 
@@ -52,7 +52,7 @@ config_pacman(){
 
 config_base(){
   echo "instalación de red y complementos"
-  sudo pacman -Sy --noconfirm --needed \
+  sudo pacman -S --noconfirm --needed \
   networkmanager dnsmasq wget curl
 
   sudo systemctl enable NetworkManager
@@ -61,7 +61,7 @@ config_base(){
 
 packages_intel_arc(){
   echo "instalación de paquetes para intel arc"
-  sudo pacman -Sy --noconfirm --needed \
+  sudo pacman -S --noconfirm --needed \
   libvdpau-va-gl intel-media-driver mesa \
   vpl-gpu-rt vulkan-intel lib32-mesa lib32-vulkan-intel libva \
   libva-utils intel-compute-runtime intel-gmmlib intel-gpu-tools vulkan-tools \
@@ -72,26 +72,26 @@ packages_intel_arc(){
 
 packages_multimedia(){
   echo "Paquetes de multimedia"
-  sudo pacman -Sy --noconfirm --needed ffmpeg gstreamer gst-libav gst-plugins-good \
+  sudo pacman -S --noconfirm --needed ffmpeg gstreamer gst-libav gst-plugins-good \
   gst-plugins-bad gst-plugins-ugly gst-plugins-base aom dav1d rav1e svt-av1 x264 x265 
 }
 
 packeges_xwayland(){
   echo "paquetes para xwayland" 
-  sudo pacman -Sy --noconfirm --needed \
+  sudo pacman -S --noconfirm --needed \
   xorg-xwayland xorg-xeyes xorg-xlsclients
 }
 
 packeges_kde(){
   echo "paquetes para kde"
-  sudo pacman -Sy --noconfirm --needed \
+  sudo pacman -S --noconfirm --needed \
   plasma-desktop plasma-nm plasma-pa kscreen kde-gtk-config breeze breeze-gtk \
   breeze-icons gnome-themes-extra kwallet-pam spectacle filelight partitionmanager 
 }
 
 packeges_personalized(){
   echo "paquetes personalizados hechi por mí"
-  sudo pacman -Sy --noconfirm --needed \
+  sudo pacman -S --noconfirm --needed \
   base-devel git less vlc-plugins-all vlc obs-studio gwenview ffmpegthumbs \
   scrcpy android-tools kdeconnect ark unrar zip unzip xclip xsel lact mangohud \
   lib32-mangohud gamemode gamescope steam noto-fonts-cjk goverlay krita fastfetch \
@@ -107,7 +107,7 @@ packeges_nvchad(){
 
 packeges_flatpak(){
   echo "Instalando flatpak"
-  sudo pacman -Sy --noconfirm --needed flatpak
+  sudo pacman -S --noconfirm --needed flatpak
 
   echo "Instalando aplicaciones de flatpak"
   flatpak install --noninteractive --assumeyes \
@@ -126,7 +126,7 @@ packeges_flatpak(){
 
 packeges_dualboot(){
   echo "Instalando paquetes para dualboot"
-  sudo pacman -Sy --noconfirm --needed os-prober ntfs-3g
+  sudo pacman -S --noconfirm --needed os-prober ntfs-3g
 
   echo "Va al directorio "sudo vim /etc/default/grub" y cambia la linea GRUB_DISABLE_OS_PROBER=true por GRUB_DISABLE_OS_PROBER=false"
   echo ""
