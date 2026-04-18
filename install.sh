@@ -72,7 +72,7 @@ packeges_kde(){
   echo "paquetes para kde"
   sudo pacman -Sy --noconfirm --needed \
   plasma-desktop plasma-nm plasma-pa kscreen kde-gtk-config breeze breeze-gtk \
-  breeze-icons gnome-themes-extra kwallet-pam spectacle filelight
+  breeze-icons gnome-themes-extra kwallet-pam spectacle filelight partitionmanager 
 }
 
 packeges_personalized(){
@@ -82,7 +82,8 @@ packeges_personalized(){
   scrcpy android-tools kdeconnect ark unrar zip unzip xclip xsel lact mangohud \
   lib32-mangohud gamemode gamescope steam noto-fonts-cjk goverlay krita fastfetch \
   prismlauncher ntfs-3g gparted drawio-desktop opentoonz libresprite alsa-scarlett-gui \
-  easyeffects reaper neovim
+  easyeffects reaper neovim obsidian thunderbird podman podman-compose docker docker-compose \
+  podman-desktop btop nvtop
 }
 
 packeges_nvchad(){
