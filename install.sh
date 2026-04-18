@@ -168,6 +168,8 @@ elif [ "$modo_inst" == "2" ]; then
         [[ "$resp" == "s" || "$resp" == "S" ]]
     }
 
+    if preguntar "instalar cachyos repo"; then cachyos; fi
+    if preguntar "instalar cachyos-games repo"; then cahyos_games; fi
     if preguntar "configurar Pacman (ILoveCandy)"; then config_pacman; fi
     if preguntar "instalar base (NetworkManager/Red)"; then config_base; fi
     if preguntar "instalar drivers Intel Arc"; then packages_intel_arc; fi
