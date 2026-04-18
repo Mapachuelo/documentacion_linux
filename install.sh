@@ -25,6 +25,20 @@ cat << "EOF"
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢺⣏⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣇⣀⣠⡞⠀⠀⠀
 EOF
 
+cachyos(){
+  echo "Instalando cachyos repo"
+  curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+  tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+  sudo ./cachyos-repo.sh
+}
+
+cahyos_games(){
+  echo "Instalando cachyos-games repo"
+  sudo pacman -S --noconfirm --needed \
+  cachyos-hello cachyos-gaming-meta cachyos-gaming-applications 
+    heroic-games-launcher-bin 
+}
+
 shell_fish(){
   echo "Instalando de shell en la terminal"
   sudo pacman -Sy --noconfirm --needed fish
@@ -106,8 +120,7 @@ packeges_flatpak(){
   org.onlyoffice.desktopeditors \
   net.pcsx2.PCSX2 \
   flathub net.rpcs3.RPCS3 \
-  net.shadps4.shadPS4 \
-  com.heroicgameslauncher.hgl 
+  net.shadps4.shadPS4 
 
 }
 
@@ -133,6 +146,8 @@ read -p "Seleccione una opción [1-2]: " modo_inst
 
 if [ "$modo_inst" == "1" ]; then
     echo "Iniciando instalación automática..."
+    cachyos
+    cahyos_games
     config_pacman
     config_base
     packages_intel_arc
