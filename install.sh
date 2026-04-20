@@ -25,20 +25,6 @@ cat << "EOF"
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢺⣏⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣇⣀⣠⡞⠀⠀⠀
 EOF
 
-cachyos(){
-  echo "Instalando cachyos repo"
-  curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
-  tar xvf cachyos-repo.tar.xz && cd cachyos-repo
-  sudo ./cachyos-repo.sh
-}
-
-cahyos_games(){
-  echo "Instalando cachyos-games repo"
-  sudo pacman -S --noconfirm --needed \
-  cachyos-hello cachyos-gaming-meta cachyos-gaming-applications \
-  heroic-games-launcher-bin chwd
-}
-
 shell_fish(){
   echo "Instalando de shell en la terminal"
   sudo pacman -S --noconfirm --needed fish
@@ -146,8 +132,6 @@ read -p "Seleccione una opción [1-2]: " modo_inst
 
 if [ "$modo_inst" == "1" ]; then
     echo "Iniciando instalación automática..."
-    cachyos
-    cahyos_games
     config_pacman
     config_base
     packages_intel_arc
@@ -168,8 +152,6 @@ elif [ "$modo_inst" == "2" ]; then
         [[ "$resp" == "s" || "$resp" == "S" ]]
     }
 
-    if preguntar "instalar cachyos repo"; then cachyos; fi
-    if preguntar "instalar cachyos-games repo"; then cahyos_games; fi
     if preguntar "configurar Pacman (ILoveCandy)"; then config_pacman; fi
     if preguntar "instalar base (NetworkManager/Red)"; then config_base; fi
     if preguntar "instalar drivers Intel Arc"; then packages_intel_arc; fi
