@@ -106,7 +106,8 @@ packeges_flatpak(){
   org.onlyoffice.desktopeditors \
   net.pcsx2.PCSX2 \
   flathub net.rpcs3.RPCS3 \
-  net.shadps4.shadPS4 
+  net.shadps4.shadPS4 \
+  com.heroicgameslauncher.hgl
 
 }
 
