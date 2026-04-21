@@ -121,9 +121,9 @@ packeges_dualboot(){
   echo ""
   echo "ver donde esta el instalación de windows "sudo grub-mkconfig -o /boot/grub/grub.cfg""
   echo ""
-  echo "ver la ruta de windows para que inicie automatico "grep "menuentry " /boot/grub/grub.cfg""
-  echo "edita el archivo "sudo vim /etc/default/grub" y cambia la linea GRUB_DEFAULT=0 por GRUB_DEFAULT="Windows 11 (loader) (on /dev/sda1)""
-  echo "Recarga para aplicar los cambios "sudo grub-mkconfig -o /boot/grub/grub.cfg""
+  echo "ver la ruta de windows para que inicie automatico:  grep "menuentry " /boot/grub/grub.cfg " 
+  echo "edita el archivo: sudo vim /etc/default/grub  - y cambia la linea GRUB_DEFAULT=0 por GRUB_DEFAULT='Windows 11 (loader) (on /dev/sda1)'"
+  echo "Recarga para aplicar los cambios: sudo grub-mkconfig -o /boot/grub/grub.cfg"  
 }
 
 echo "¿Cómo desea realizar la instalación?"
