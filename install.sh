@@ -45,7 +45,7 @@ config_base(){
   sudo systemctl start NetworkManager
 }
 
-packages_intel_arc(){
+packeges_intel_arc(){
   echo "instalación de paquetes para intel arc"
   sudo pacman -S --noconfirm --needed \
   libvdpau-va-gl intel-media-driver mesa \
@@ -56,7 +56,7 @@ packages_intel_arc(){
   vulkan-validation-layers 
 }
 
-packages_multimedia(){
+packeges_multimedia(){
   echo "Paquetes de multimedia"
   sudo pacman -S --noconfirm --needed ffmpeg gstreamer gst-libav gst-plugins-good \
   gst-plugins-bad gst-plugins-ugly gst-plugins-base aom dav1d rav1e svt-av1 x264 x265 
@@ -135,8 +135,8 @@ if [ "$modo_inst" == "1" ]; then
     echo "Iniciando instalación automática..."
     config_pacman
     config_base
-    packages_intel_arc
-    packages_multimedia
+    packeges_intel_arc
+    packeges_multimedia
     packeges_xwayland
     packeges_kde
     packeges_personalized
@@ -155,8 +155,8 @@ elif [ "$modo_inst" == "2" ]; then
 
     if preguntar "configurar Pacman (ILoveCandy)"; then config_pacman; fi
     if preguntar "instalar base (NetworkManager/Red)"; then config_base; fi
-    if preguntar "instalar drivers Intel Arc"; then packages_intel_arc; fi
-    if preguntar "instalar paquetes Multimedia"; then packages_multimedia; fi
+    if preguntar "instalar drivers Intel Arc"; then packeges_intel_arc; fi
+    if preguntar "instalar paquetes Multimedia"; then packeges_multimedia; fi
     if preguntar "instalar soporte XWayland"; then packeges_xwayland; fi
     if preguntar "instalar KDE Plasma"; then packeges_kde; fi
     if preguntar "instalar tus paquetes personalizados"; then packeges_personalized; fi
