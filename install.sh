@@ -2,8 +2,8 @@
 
 set -e 
 
+neko_arc(){ 
 cat << "EOF"
-|| -- instalación de paquetes en arch linux -- ||
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⢤⡀⠀⢀⡤⠒⠢⣀⡠⠴⠒⢂⣠⡽⢧⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠊⠁⠀⠀⠀⠈⠓⠁⠀⠀⠀⠀⢠⣴⣾⣿⣟⣁⢸⡇⠀⠀
 ⣀⠀⠠⠤⠤⠔⠒⠒⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠈⠻⣤⢶⡭⠟⢻⡇⠀⠀
@@ -24,10 +24,12 @@ cat << "EOF"
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣇⠀⢸⡆⠀⠀⠀⠀⠀⣠⡇⠀⠁⢸⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢺⣏⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣇⣀⣠⡞⠀⠀⠀
 EOF
+}
 
 setup-cachy-v3() {
-    echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
-
+  clear  
+  echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
+  neko_arc
     # 1. Limpieza total
     sudo killall pacman 2>/dev/null || true
     sudo rm -f /var/lib/pacman/db.lck
@@ -57,7 +59,9 @@ setup-cachy-v3() {
 }
 
 packeges_cachyos(){
+  clear
   echo "Instalando paquetes de cachyos"
+  neko_arc
   sudo pacman -S --noconfirm --needed \
   linux-cachyos linux-cachyos-headers \
   plasma-foreground-booster dmemcg-booster vkbasalt-cli \
@@ -66,18 +70,24 @@ packeges_cachyos(){
 }
 
 shell_fish(){
+  clear
   echo "Instalando de shell en la terminal"
+  neko_arc
   sudo pacman -S --noconfirm --needed fish
   chsh -s /usr/bin/fish
 }
 
 config_pacman(){
+  clear
   echo "Configurando pacman"
+  neko_arc
   sudo sed -i '/#Color/a ILoveCandy' /etc/pacman.conf
 }
 
 config_base(){
+  clear
   echo "instalación de red y complementos"
+  neko_arc
   sudo pacman -S --noconfirm --needed \
   networkmanager dnsmasq wget curl
 
@@ -86,7 +96,9 @@ config_base(){
 }
 
 packeges_intel_arc(){
+  clear
   echo "instalación de paquetes para intel arc"
+  neko_arc
   sudo pacman -S --noconfirm --needed \
   libvdpau-va-gl intel-media-driver mesa \
   vpl-gpu-rt vulkan-intel lib32-mesa lib32-vulkan-intel libva \
@@ -97,26 +109,34 @@ packeges_intel_arc(){
 }
 
 packeges_multimedia(){
+  clear
   echo "Paquetes de multimedia"
+  neko_arc
   sudo pacman -S --noconfirm --needed ffmpeg gstreamer gst-libav gst-plugins-good \
   gst-plugins-bad gst-plugins-ugly gst-plugins-base aom dav1d rav1e svt-av1 x264 x265 
 }
 
 packeges_xwayland(){
+  clear
   echo "paquetes para xwayland" 
+  neko_arc
   sudo pacman -S --noconfirm --needed \
   xorg-xwayland xorg-xeyes xorg-xlsclients
 }
 
 packeges_kde(){
+  clear
   echo "paquetes para kde"
+  neko_arc
   sudo pacman -S --noconfirm --needed \
   plasma-desktop plasma-nm plasma-pa kscreen kde-gtk-config breeze breeze-gtk \
   breeze-icons gnome-themes-extra kwallet-pam spectacle filelight partitionmanager 
 }
 
 packeges_personalized(){
+  clear
   echo "paquetes personalizados hechi por mí"
+  neko_arc
   sudo pacman -S --noconfirm --needed \
   base-devel git less vlc-plugins-all vlc obs-studio gwenview ffmpegthumbs \
   scrcpy android-tools kdeconnect ark unrar zip unzip xclip xsel lact mangohud \
@@ -127,12 +147,16 @@ packeges_personalized(){
 }
 
 packeges_nvchad(){
+  clear
   echo "Instalando nvchad"
+  neko_arc
   git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 }
 
 packeges_flatpak(){
+  clear
   echo "Instalando flatpak"
+  neko_arc
   sudo pacman -S --noconfirm --needed flatpak
 
   echo "Instalando aplicaciones de flatpak"
@@ -151,7 +175,9 @@ packeges_flatpak(){
 }
 
 packeges_dualboot(){
+  clear
   echo "Instalando paquetes para dualboot"
+  neko_arc
   sudo pacman -S --noconfirm --needed os-prober ntfs-3g
 
   echo "Va al directorio "sudo vim /etc/default/grub" y cambia la linea GRUB_DISABLE_OS_PROBER=true por GRUB_DISABLE_OS_PROBER=false"
@@ -165,6 +191,8 @@ packeges_dualboot(){
   echo "Recarga para aplicar los cambios: sudo grub-mkconfig -o /boot/grub/grub.cfg"  
 }
 
+clear
+neko_arc
 echo "¿Cómo desea realizar la instalación?"
 echo "1) Automática (Instala todo por defecto)"
 echo "2) Manual (Elegir qué componentes instalar)"
