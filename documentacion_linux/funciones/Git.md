@@ -26,6 +26,11 @@ git fetch --all --prune
 ```
 git fetch
 ```
+ramas online
+
+```
+git fetch -a
+```
 
 ## Cambia de rama
 Una vez que confirmes que la rama aparece en la lista, puedes moverte a ella.

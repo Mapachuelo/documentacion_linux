@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentacion_linux/funciones/dualboot.md",
+                "file": "documentacion_linux/funciones/Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dualboot"
+              "title": "Git"
             }
           }
         ],
@@ -214,6 +214,7 @@
   },
   "active": "b36dd8c7d5123cc5",
   "lastOpenFiles": [
+    "documentacion_linux/funciones/dualboot.md",
     "documentacion_linux/funciones/Snapshots para btrfs.md",
     "README.md",
     "documentacion_linux/Readme_documentacion.md",
@@ -232,7 +233,6 @@
     "documentacion_linux/funciones/gamescope.md",
     "documentacion_linux/funciones/flatpak.md",
     "documentacion_linux/funciones/fish.md",
-    "documentacion_linux/funciones/dualboot.md",
     "documentacion_linux/funciones/Davinci_resolve.md",
     "documentacion_linux/funciones/scrcpy.md",
     "install.sh~",
