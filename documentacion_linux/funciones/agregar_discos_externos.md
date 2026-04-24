@@ -51,7 +51,7 @@ Maximo rendimiento en lectura y escritura (Para computadores modernos).
 ```
 UUID=TU-UUID-AQUI /ruta ext4 defaults,noatime,data=ordered 0 2
 ```
-#### ext4 hdd
+#### Ext4 hdd
 Para discos hdd recomendable.
 ```
 UUID=TU-UUID-AQUI /ruta ext4 defaults,noatime,commit=60 0 2
@@ -62,7 +62,7 @@ Utiliza compresión zstd para ahorrar espacio (Para computadores modernos).
 ```
 UUID=TU-UUID-AQUI /ruta btrfs defaults,noatime,compress=zstd:3,ssd 0 0
 ```
-#### brfs hdd
+#### Btrfs hdd
 Recomendable para discos hdd.
 ```
 UUID=TU-UUID-AQUI /ruta defaults,noatime,autodefrag,compress=zstd:1 0 0
