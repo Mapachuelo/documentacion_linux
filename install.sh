@@ -25,6 +25,45 @@ cat << "EOF"
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢺⣏⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣇⣀⣠⡞⠀⠀⠀
 EOF
 
+setup-cachy-v3() {
+    echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
+
+    # 1. Limpieza total
+    sudo killall pacman 2>/dev/null || true
+    sudo rm -f /var/lib/pacman/db.lck
+
+    # 2. Soporte de llaves y mirrors
+    sudo pacman -U --noconfirm \
+        'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-20240331-1-any.pkg.tar.zst' \
+        'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-27-1-any.pkg.tar.zst' \
+        'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-27-1-any.pkg.tar.zst'
+
+    # 3. Habilitar arquitectura v3 (Descomenta y cambia la línea si es necesario)
+    if grep -q "^#Architecture" /etc/pacman.conf; then
+        sudo sed -i 's/^#Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
+    else
+        sudo sed -i 's/^Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
+    fi
+
+    # 4. Inserción limpia de repositorios
+    sudo sed -i '/\[cachyos\]/,+2d' /etc/pacman.conf
+    sudo sed -i '/\[cachyos-v3\]/,+2d' /etc/pacman.conf
+
+    # Escribimos los repositorios asegurando el orden correcto
+    echo -e "\n[cachyos-v3]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-v3-mirrorlist\n\n[cachyos]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-mirrorlist" | sudo tee -a /etc/pacman.conf
+
+    # 5. Sincronización
+    sudo pacman -Syy
+}
+
+packeges_cachyos(){
+  echo "Instalando paquetes de cachyos"
+  sudo pacman -S --noconfirm --needed \
+  linux-cachyos linux-cachyos-headers \
+  plasma-foreground-booster dmemcg-booster
+
+}
+
 shell_fish(){
   echo "Instalando de shell en la terminal"
   sudo pacman -S --noconfirm --needed fish
@@ -133,6 +172,8 @@ read -p "Seleccione una opción [1-2]: " modo_inst
 
 if [ "$modo_inst" == "1" ]; then
     echo "Iniciando instalación automática..."
+    setup-cachy-v3
+    packeges_cachyos
     config_pacman
     config_base
     packeges_intel_arc
@@ -153,6 +194,8 @@ elif [ "$modo_inst" == "2" ]; then
         [[ "$resp" == "s" || "$resp" == "S" ]]
     }
 
+    if preguntar "configurar CachyOS v3 (Modo Restringido)"; then setup-cachy-v3; fi
+    if preguntar "instalar paquetes de CachyOS"; then packeges_cachyos; fi
     if preguntar "configurar Pacman (ILoveCandy)"; then config_pacman; fi
     if preguntar "instalar base (NetworkManager/Red)"; then config_base; fi
     if preguntar "instalar drivers Intel Arc"; then packeges_intel_arc; fi
