@@ -60,7 +60,7 @@ packeges_cachyos(){
   echo "Instalando paquetes de cachyos"
   sudo pacman -S --noconfirm --needed \
   linux-cachyos linux-cachyos-headers \
-  plasma-foreground-booster dmemcg-booster
+  plasma-foreground-booster dmemcg-booster vkbasalt-cli
 
 }
 
