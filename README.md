@@ -1,6 +1,6 @@
 # Documentación sobre linux
 <p aling="center">
-    <a href="README.md">Español</a> 
+    <a href="README.md">Español</a> | 
 </p>
 
 Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre y no se me olvide XD. 
