@@ -65,7 +65,7 @@ packeges_cachyos(){
   sudo pacman -S --noconfirm --needed \
   linux-cachyos linux-cachyos-headers \
   plasma-foreground-booster dmemcg-booster vkbasalt-cli \
-  heroic-games-launcher-bin
+  heroic-games-launcher-bin zen-browser-bin
 
 }
 
