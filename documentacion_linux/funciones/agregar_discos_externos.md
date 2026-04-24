@@ -31,11 +31,11 @@ Este es un ejemplo a editar y agregar, según el UUID que estaba en la lista de 
 Un ejemplo
 
 ```
-UUID=TU-UUID-AQUI  /mnt/midisco  ext4  defaults,noatime  0 2
+UUID=TU-UUID-AQUI  /ruta  ext4  defaults,noatime  0 2
 ```
 Un ejemplo en disco ntfs (No recomendable, solo es un ejemplo, se recomienda que el nombre del disco no tenga espacio a la hora de crearse).
 ```
-UUID=AE2496562496217F  /run/media/mapachuelo/T500\040crucial  ntfs3   defaults,uid=1000,gid=1000,dmask=022,fmask=133,exec,force   0   0
+UUID=AE24962696217F  /run/media/mapachuelo/T500\040crucial  ntfs3   defaults,uid=1000,gid=1000,dmask=022,fmask=133,exec,force   0   0
 ```
 El comando `force` no es recomendable, ya que se salta problemas que tiene el disco.
 
