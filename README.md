@@ -1,8 +1,11 @@
 # Documentación sobre linux
+<p aling="center">
+    <a href="documentation/README.es.md">Español</a> 
+</p>
 
 Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre y no se me olvide XD. 
 
-[Documentación sobre linux en español](documentacion_linux/Readme_documentacion.md)
+[Documentación sobre linux en español](documentation/README.es.md)
 
 ## Script de instalación 
 Para instalar el script, se debe ejecutar el siguiente comando en la terminal:
