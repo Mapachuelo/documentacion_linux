@@ -46,10 +46,32 @@ sudo mount -a
 
 ## Recomandaciones
 
+### Disco ext4 ssd
+Maximo rendimiento en lectura y escritura (Para computadores modernos).
+```
+UUID=TU-UUID-AQUI /ruta ext4 defaults,noatime,data=ordered 0 2
+```
+#### ext4 hdd
+Para discos hdd recomendable.
+```
+UUID=TU-UUID-AQUI /ruta ext4 defaults,noatime,commit=60 0 2
+```
+
+### Disco brtfs
+Utiliza compresión zstd para ahorrar espacio (Para computadores modernos).
+```
+UUID=TU-UUID-AQUI /ruta btrfs defaults,noatime,compress=zstd:3,ssd 0 0
+```
+#### brfs hdd
+Recomendable para discos hdd.
+```
+UUID=TU-UUID-AQUI /ruta defaults,noatime,autodefrag,compress=zstd:1 0 0
+```
+
 ### Recomendación para disco ntfs 
 Para juegos con steam y otras cosas (algunos juegos dan errores de lectura y escritura).
 ```
-UUID=TU-UUID-AQUI /mnt/midisco ntfs3 uid=1000,gid=1000,rw,user,exec,umask=000 0 0
+UUID=TU-UUID-AQUI /ruta ntfs3 uid=1000,gid=1000,rw,user,exec,umask=000 0 0
 ```
 #### Arreglo disco ntfs
 Es necesario ir a windows y abrir la terminal como administrador para arreglar el disco.
