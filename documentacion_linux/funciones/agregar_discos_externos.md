@@ -1,41 +1,61 @@
-#montar discos diferentes y no tener contraseña para que abran con el sistema
+Montar discos externos que inicien automaticamente con el sistema, la razón es cuando uno necesita acceder al disco externo al inicio se requiere una contraseña, esta es una guía para quitar la contraseña al inicio del sistema para discos externos.
 
+Ver la lista de discos existente en el sistema, con su id, tipo de disco y uso.
+```
 lsblk -f
+```
+Ver las particiones de solo id y tipo.
+```
 sudo blkid
+```
 
-#copia de seguridad 
-
+Si eres alguien principiante hacer una copia de seguridad.
+```
 sudo cp /etc/fstab /etc/fstab.bak
+```
 
-#editar
+Ya con todo lo requerido el siguiente paso
 
+## Editar
+Edita este directorio que esta el acceso a los discos.
+```
 sudo vim /etc/fstab
+```
+
+Este es un ejemplo a editar y agregar, según el UUID que estaba en la lista de `lsblk -f` debe ser agregado para que el sistema entienda.
+- UUID = UUID del disco que quiere agregar según `lsblk -f`.
+- / = La ruta que va colocar el disco
+- ext4 = depende que tipo de disco va agrega si es btrfs, ntfs, entre otros. Debe tener en cuenta que tipo de disco es.
+- defaults = La lista que tipo de requisitos se va utilizar en el disco, si se va comprimir los archivos, saltarse riesgos, entre otros.
+
+Un ejemplo
+
+```
 UUID=TU-UUID-AQUI  /mnt/midisco  ext4  defaults,noatime  0 2
-UUID=TU-UUID-AQUI /mnt/midisco ntfs-3 uid=1000,gid=1000,rw,user,exec,umask=000 0 0
+```
+Un ejemplo en disco ntfs (No recomendable, solo es un ejemplo, se recomienda que el nombre del disco no tenga espacio a la hora de crearse).
+```
 UUID=AE2496562496217F  /run/media/mapachuelo/T500\040crucial  ntfs3   defaults,uid=1000,gid=1000,dmask=022,fmask=133,exec,force   0   0
+```
+El comando `force` no es recomendable, ya que se salta problemas que tiene el disco.
 
-#force es para forzar el uso del disco, cuidado, repare que el disco reconozca ntfs3 y debe ser mediante windows, en mí caso no me deja porque apague forzado el computador, pero si es por otrocaso es mejor no utilizarlo
-
-#prueba sin reiniciar
-
+Probar sin reiniciar.
+```
 sudo mount -a 
-ls /mnt/midisco
+```
 
-AE2496562496217F 
+## Recomandaciones
 
-#no tener espacios al colocar nombre del disco, rompe todo el sistema de linux
-
-#para arreglar el disco y que linux lo reconozca, ya que a veces si forzamos el cierre de linux el disco da errores y para arreglarlo es con windows con 
-chkdsk D: /f
-
-#"chkdsk" va ser el disco y  "D:" el tipo de letra de la unidad y siempre tener "/f" para arreglarlo, un ejemplo diferente es
-
-chkdsk A: /f
-
-#letra del disco que tenga asignado y así nos evitamos el force en fstab en linux 
-
-UUID=B0D6164DD61613E6  /home/mapachuelo/Disco  ntfs3  defaults,uid=1000,gid=1000,dmask=022,fmask=133,exec  0  0
-
-#solución optima arreglando para jugar
-
+### Recomendación para disco ntfs 
+Para juegos con steam y otras cosas (algunos juegos dan errores de lectura y escritura).
+```
 UUID=TU-UUID-AQUI /mnt/midisco ntfs3 uid=1000,gid=1000,rw,user,exec,umask=000 0 0
+```
+#### Arreglo disco ntfs
+Es necesario ir a windows y abrir la terminal como administrador para arreglar el disco.
+"chkdsk" va ser el comando y "D:" el tipo de letra de la unidad y siempre tener "/f" para arreglarlo.
+Un ejemplo:
+```
+chkdsk D: /f
+```
+La razón es para arreglar el disco y que linux lo reconozca, ya que a veces si forzamos el cierre de linux el disco da errores.
