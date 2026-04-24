@@ -60,7 +60,8 @@ packeges_cachyos(){
   echo "Instalando paquetes de cachyos"
   sudo pacman -S --noconfirm --needed \
   linux-cachyos linux-cachyos-headers \
-  plasma-foreground-booster dmemcg-booster vkbasalt-cli
+  plasma-foreground-booster dmemcg-booster vkbasalt-cli \
+  heroic-games-launcher-bin
 
 }
 
@@ -145,8 +146,7 @@ packeges_flatpak(){
   org.onlyoffice.desktopeditors \
   net.pcsx2.PCSX2 \
   flathub net.rpcs3.RPCS3 \
-  net.shadps4.shadPS4 \
-  com.heroicgameslauncher.hgl
+  net.shadps4.shadPS4 
 
 }
 
