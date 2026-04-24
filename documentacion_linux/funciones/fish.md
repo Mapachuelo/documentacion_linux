@@ -1,16 +1,24 @@
-//------------//----Hacer funciones en la terminal con fish----//-----------------//
+Para crear un comando de tantas lineas para una sola palabra se utiliza funciones acorde a shell de fish.
+Un ejemplo como es la forma
 
-#agregar una aplicación y colocarle un nombre a esa para ejecutar un archivo, por ejemplo microsoft edge mediante flatpak, ya que en kitty se necesita funciones y es lo siguiente
+```
+function Nombre # Nombre del script
+    Comando # Comando que quiere guardar
+end  # Fin del script
+```
+Un ejemplo mediante flatpak pero sirve con cualquier cosa
+
+```
 function edge
     flatpak run com.microsoft.Edge $argv
 end
-
-
-#Explicación:
-#function edge → defines el comando edge
-#flatpak run com.microsoft.Edge $argv → pasa todos los argumentos que escribas después de edge
-#end → cierra la función
-
-#guardar preferencia de la funcion en kitty, obligatorio para guardar la función, primero funcsave y después en nombre de la función
+```
+Y de ultimo guardar la funcion creada para fish, ya que una vez que se cierra la terminal con la función sin guardar no existira para otras terminales abiertas.
+Un ejemplo 
+```
+funcsave Nombre #El nombre dado a la función
+```
+Un ejemplo como es
+```
 funcsave edge
-
+```
