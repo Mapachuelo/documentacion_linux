@@ -5,4 +5,4 @@ Este documento va estar guardado funciones de linux que he aprendido a lo largo 
 - [Android tools](español/android_tools.md)
 - [Scrycpy](español/scrcpy.md)
 - [Dualboot](español/dualboot.md)
-
+- [Wine juegos](español/wine/wine_juegos.md)
