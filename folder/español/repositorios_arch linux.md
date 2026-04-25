@@ -54,3 +54,19 @@ Solo ver que servidores tiene:
 ```
 cat /etc/pacman.d/mirrorlist
 ```
+
+## Arreglar repositorios 
+
+```
+sudo pacman -S reflector
+```
+
+Busca los 10 repositorios más actualizados y rápido en red 
+```
+sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+```
+
+Y de ultimo actualizar
+```
+sudo pacman -Syyu
+```
