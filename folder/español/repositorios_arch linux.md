@@ -63,7 +63,7 @@ sudo pacman -S reflector
 
 Busca los 10 repositorios más actualizados y rápido en red 
 ```
-sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 Y de ultimo actualizar
