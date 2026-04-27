@@ -6,3 +6,4 @@ Este documento va estar guardado funciones de linux que he aprendido a lo largo 
 - [Scrycpy](español/scrcpy.md)
 - [Dualboot](español/dualboot.md)
 - [Wine juegos](español/wine/wine_juegos.md)
+- [Btrfs](español/btrfs/btrfs.md)
