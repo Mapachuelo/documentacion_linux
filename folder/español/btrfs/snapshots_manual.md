@@ -118,5 +118,5 @@ Un ejemplo que significa lo que le aparece al ejecutar el comando en la terminal
 ## Interfaz grafica
 Paquetes necesarios para snaphots
 ```
-sudo pacman -S -needed btrfsmaintenance snapper btrfs-assistant
+sudo pacman -S --needed btrfsmaintenance snapper btrfs-assistant
 ```
