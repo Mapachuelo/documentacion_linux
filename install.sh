@@ -89,7 +89,7 @@ config_base(){
   echo "instalación de red y complementos"
   neko_arc
   sudo pacman -S --noconfirm --needed \
-  networkmanager dnsmasq wget curl
+  networkmanager dnsmasq wget curl reflector
 
   sudo systemctl enable NetworkManager
   sudo systemctl start NetworkManager
