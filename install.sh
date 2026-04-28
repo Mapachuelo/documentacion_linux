@@ -35,7 +35,7 @@ setup-cachy-v3() {
     sudo rm -f /var/lib/pacman/db.lck
 
     # 2. Soporte de llaves y mirrors
-    sudo pacman -U --noconfirm \
+    yes | sudo pacman -U --noconfirm \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-20240331-1-any.pkg.tar.zst' \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-27-1-any.pkg.tar.zst' \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-27-1-any.pkg.tar.zst'
