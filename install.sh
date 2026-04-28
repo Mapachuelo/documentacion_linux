@@ -28,35 +28,33 @@ EOF
 
 setup-cachy-v3() {
   clear  
-echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
-neko_arc
+    echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
+    neko_arc
+    
+    sudo killall pacman 2>/dev/null || true
+    sudo rm -f /var/lib/pacman/db.lck
+    sudo rm -f /var/cache/pacman/pkg/cachyos*
 
-sudo killall pacman 2>/dev/null || true
-sudo rm -f /var/lib/pacman/db.lck
-sudo rm -f /var/cache/pacman/pkg/cachyos*
+    # --- NUEVO MÉTODO DE LLAVES ---
+    sudo pacman-key --recv-keys F3B607488DB35A47 --keyserver keyserver.ubuntu.com
+    # Firmar la clave del repositorio
+    sudo pacman-key --lsign-key F3B607488DB35A47    # ------------------------------
 
-# --- NUEVO MÉTODO DE LLAVES ---
-sudo pacman-key --init
-curl -sLo /tmp/cachyos-keyring.gpg https://mirror.cachyos.org/cachyos-keyring.gpg
-sudo pacman-key --add /tmp/cachyos-keyring.gpg
-sudo pacman-key --lsign-key F3B607488DB35989
-# ------------------------------
+    yes | sudo pacman -U --noconfirm \
+        'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-20240331-1-any.pkg.tar.zst' \
+        'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-27-1-any.pkg.tar.zst' \
+        'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-27-1-any.pkg.tar.zst'
 
-yes | sudo pacman -U --noconfirm \
-    'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-20240331-1-any.pkg.tar.zst' \
-    'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-27-1-any.pkg.tar.zst' \
-    'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-27-1-any.pkg.tar.zst'
+    sudo pacman-key --populate archlinux cachyos
 
-sudo pacman-key --populate archlinux cachyos
+    # Configuración de pacman.conf (Arquitectura y Repos)
+    sudo sed -i 's/^#Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
+    sudo sed -i '/\[cachyos\]/,+2d' /etc/pacman.conf
+    sudo sed -i '/\[cachyos-v3\]/,+2d' /etc/pacman.conf
 
-# Configuración de pacman.conf (Arquitectura y Repos)
-sudo sed -i 's/^#Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
-sudo sed -i '/\[cachyos\]/,+2d' /etc/pacman.conf
-sudo sed -i '/\[cachyos-v3\]/,+2d' /etc/pacman.conf
+    echo -e "\n[cachyos-v3]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-v3-mirrorlist\n\n[cachyos]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-mirrorlist" | sudo tee -a /etc/pacman.conf
 
-echo -e "\n[cachyos-v3]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-v3-mirrorlist\n\n[cachyos]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-mirrorlist" | sudo tee -a /etc/pacman.conf
-
-sudo pacman -Syy
+    sudo pacman -Syy
 }
 
 packeges_cachyos(){
