@@ -56,7 +56,8 @@ sudo sed -i '/\[cachyos-v3\]/,+2d' /etc/pacman.conf
 
 echo -e "\n[cachyos-v3]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-v3-mirrorlist\n\n[cachyos]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-mirrorlist" | sudo tee -a /etc/pacman.conf
 
-sudo pacman -Syy}
+sudo pacman -Syy
+}
 
 packeges_cachyos(){
   clear
