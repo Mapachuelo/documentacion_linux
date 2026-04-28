@@ -114,9 +114,3 @@ Un ejemplo que significa lo que le aparece al ejecutar el comando en la terminal
 | Total      | tamaño total del subvolumen si estuviera solo      |
 | Exclusive  | espacio **real que solo usa ese snapshot**         |
 | Set shared | datos compartidos con otros snapshots o el sistema |
-
-## Interfaz grafica
-Paquetes necesarios para snaphots
-```
-sudo pacman -S --needed btrfsmaintenance snapper btrfs-assistant
-```
