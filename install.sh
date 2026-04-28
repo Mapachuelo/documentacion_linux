@@ -31,44 +31,30 @@ setup-cachy-v3() {
     echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
     neko_arc
     
-    # 1. Limpieza total
     sudo killall pacman 2>/dev/null || true
     sudo rm -f /var/lib/pacman/db.lck
-    # Borramos el caché de los intentos fallidos anteriores
     sudo rm -f /var/cache/pacman/pkg/cachyos*
 
-    # 2. Romper el ciclo de las llaves (El paso crucial)
-    # Inicializamos y traemos la llave maestra de CachyOS ANTES de descargar los paquetes
+    # --- NUEVO MÉTODO DE LLAVES ---
     sudo pacman-key --init
-    sudo pacman-key --recv-keys F3B607488DB35989 --keyserver hkp://keyserver.ubuntu.com
+    curl -sL https://mirror.cachyos.org/cachyos-keyring.gpg | sudo pacman-key --add -
     sudo pacman-key --lsign-key F3B607488DB35989
+    # ------------------------------
 
-    # 3. Soporte de llaves y mirrors
-    # Ahora pacman ya confía en CachyOS y dejará instalar esto sin error de firma PGP
     yes | sudo pacman -U --noconfirm \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-20240331-1-any.pkg.tar.zst' \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-27-1-any.pkg.tar.zst' \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-27-1-any.pkg.tar.zst'
 
-    # 4. Poblar el llavero
-    # Ahora que el paquete keyring está instalado, le decimos a pacman que aplique todas las llaves
     sudo pacman-key --populate archlinux cachyos
 
-    # 5. Habilitar arquitectura v3
-    if grep -q "^#Architecture" /etc/pacman.conf; then
-        sudo sed -i 's/^#Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
-    else
-        sudo sed -i 's/^Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
-    fi
-
-    # 6. Inserción limpia de repositorios
+    # Configuración de pacman.conf (Arquitectura y Repos)
+    sudo sed -i 's/^#Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
     sudo sed -i '/\[cachyos\]/,+2d' /etc/pacman.conf
     sudo sed -i '/\[cachyos-v3\]/,+2d' /etc/pacman.conf
 
-    # Escribimos los repositorios asegurando el orden correcto
     echo -e "\n[cachyos-v3]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-v3-mirrorlist\n\n[cachyos]\nUsage = Sync Search Install\nInclude = /etc/pacman.d/cachyos-mirrorlist" | sudo tee -a /etc/pacman.conf
 
-    # 7. Sincronización
     sudo pacman -Syy
 }
 
