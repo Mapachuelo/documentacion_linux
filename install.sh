@@ -40,7 +40,10 @@ setup-cachy-v3() {
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-27-1-any.pkg.tar.zst' \
         'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-27-1-any.pkg.tar.zst'
 
-    S
+    # Refrescar llaves de inmediato para que no vuelva a preguntar después
+    sudo pacman-key --init
+    sudo pacman-key --populate archlinux cachyos
+
     # 3. Habilitar arquitectura v3 (Descomenta y cambia la línea si es necesario)
     if grep -q "^#Architecture" /etc/pacman.conf; then
         sudo sed -i 's/^#Architecture =.*/Architecture = x86_64 x86_64_v3/' /etc/pacman.conf
