@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "folder/español/btrfs/snapshots_automatico.md",
+                "file": "folder/español/btrfs/snapshots_manual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "snapshots_automatico"
+              "title": "snapshots_manual"
             }
           }
         ],
@@ -214,9 +214,10 @@
   },
   "active": "b36dd8c7d5123cc5",
   "lastOpenFiles": [
-    "folder/español/btrfs/btrfs.md",
-    "folder/español/btrfs/snapshots_manual.md",
+    "folder/español/copilar_mesa_sin_instalar_al_sistema.md",
     "folder/español/btrfs/snapshots_automatico.md",
+    "folder/español/btrfs/snapshots_manual.md",
+    "folder/español/btrfs/btrfs.md",
     "install.sh~",
     "folder/español/dualboot.md",
     "folder/documentacion.md~",
@@ -236,7 +237,6 @@
     "folder/español/gamescope.md",
     "folder/español/fish.md",
     "folder/español/error.md",
-    "folder/español/copilar_mesa_sin_instalar_al_sistema.md",
     "folder/español/cambiar_la_calidad_de_audio.md",
     "folder/español/android_tools.md",
     "folder/español/agregar_discos_externos.md",
