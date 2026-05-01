@@ -103,7 +103,7 @@ packeges_intel_arc(){
   libva-utils intel-compute-runtime intel-gmmlib intel-gpu-tools vulkan-tools \
   mesa-utils clinfo libvpl level-zero-loader level-zero-headers ocl-icd \
   lib32-ocl-icd linux-firmware-intel fwupd vulkan-icd-loader lib32-vulkan-icd-loader \
-  vulkan-validation-layers 
+  vulkan-validation-layers lib32-libva-intel-driver
 }
 
 packeges_multimedia(){
@@ -141,7 +141,7 @@ packeges_personalized(){
   lib32-mangohud gamemode gamescope steam noto-fonts-cjk goverlay krita fastfetch \
   prismlauncher ntfs-3g gparted drawio-desktop opentoonz libresprite alsa-scarlett-gui \
   easyeffects reaper neovim obsidian thunderbird podman podman-compose docker docker-compose \
-  podman-desktop btop nvtop musescore
+  podman-desktop btop nvtop musescore lsp-plugins-lv2 lsp-plugins-vst3 ncdu
 }
 
 packeges_nvchad(){

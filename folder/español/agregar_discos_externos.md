@@ -78,6 +78,11 @@ Es necesario ir a windows y abrir la terminal como administrador para arreglar e
 "chkdsk" va ser el comando y "D:" el tipo de letra de la unidad y siempre tener "/f" para arreglarlo.
 Un ejemplo:
 ```
-chkdsk D: /f
+chkdsk D: /f  
 ```
 La razón es para arreglar el disco y que linux lo reconozca, ya que a veces si forzamos el cierre de linux el disco da errores.
+
+## Tener permisos para leer y escribir en discos externos
+```
+sudo chown -R $USER:$USER /ruta/de/tu/disco
+```
