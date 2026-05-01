@@ -141,7 +141,7 @@ packeges_personalized(){
   lib32-mangohud gamemode gamescope steam noto-fonts-cjk goverlay krita fastfetch \
   prismlauncher ntfs-3g gparted drawio-desktop opentoonz libresprite alsa-scarlett-gui \
   easyeffects reaper neovim obsidian thunderbird podman podman-compose docker docker-compose \
-  podman-desktop btop nvtop musescore lsp-plugins-lv2 lsp-plugins-vst3
+  podman-desktop btop nvtop musescore lsp-plugins-lv2 lsp-plugins-vst3 ncdu
 }
 
 packeges_nvchad(){
