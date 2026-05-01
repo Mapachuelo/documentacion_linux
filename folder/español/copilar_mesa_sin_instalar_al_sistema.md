@@ -34,24 +34,20 @@ VK_ICD_FILENAMES=/home/mapachuelo/Juegos/mesa_test/share/vulkan/icd.d/intel_icd.
 
 
 ## Dependencias
-Dependencias necesarias  - falta
+
+### Arch linux
 ```
-glslang-tools
-python3-pyyaml
-python3-mako
-libdrm
-libclc-<version>
-llvm-<version>
-libllvmspirvlib-<version>
-libclang-<version>
-byacc (or) bison
-
-flex
-
-# Wayland
-libwayland
-libwayland-egl-backend
-
+sudo pacman -S --needed \
+    base-devel meson ninja git cmake bc \
+    python-mako python-ply python-yaml python-markupsafe python-setuptools \
+    libdrm libx11 libxext libxfixes libxcb libxdamage libxshmfence \
+    libxrandr libxxf86vm libxv libxrender xcb-util-keysyms xcb-util-wm \
+    wayland wayland-protocols libglvnd \
+    zlib expat elfutils zstd libunwind lm_sensors \
+    llvm clang libclc spirv-llvm-translator spirv-tools glslang \
+    vulkan-icd-loader vulkan-headers \
+    libva libva-utils libvdpau libvdpau-va-gl \
+    bison flex valgrind
 ```
 
 
