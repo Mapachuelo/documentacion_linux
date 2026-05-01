@@ -41,20 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "folder/español/btrfs/snapshots_manual.md",
-=======
-                "file": "folder/español/flatpak.md",
->>>>>>> 1162f1ef90a141a484f70a2ac45f3e0f4c1c2e33
+                "file": "folder/español/dualboot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "snapshots_manual"
-=======
-              "title": "flatpak"
->>>>>>> 1162f1ef90a141a484f70a2ac45f3e0f4c1c2e33
+              "title": "dualboot"
             }
           }
         ],
@@ -222,25 +214,22 @@
   },
   "active": "b36dd8c7d5123cc5",
   "lastOpenFiles": [
-<<<<<<< HEAD
+    "folder/español/agregar_discos_externos.md",
+    "folder/español/dualboot.md",
+    "folder/español/android_tools.md",
+    "folder/español/cambiar_la_calidad_de_audio.md",
     "folder/español/copilar_mesa_sin_instalar_al_sistema.md",
-    "folder/español/btrfs/snapshots_automatico.md",
     "folder/español/btrfs/snapshots_manual.md",
+    "folder/español/btrfs/snapshots_automatico.md",
     "folder/español/btrfs/btrfs.md",
     "install.sh~",
-=======
-    "folder/español/btrfs/snapshots_automatico.md",
-    "folder/español/repositorios_arch linux.md",
->>>>>>> 1162f1ef90a141a484f70a2ac45f3e0f4c1c2e33
-    "folder/español/dualboot.md",
     "folder/documentacion.md~",
     "folder/español/btrfs/btrfs.md~",
-    "folder/español/btrfs/snapshots_manual.md",
-    "folder/español/btrfs/btrfs.md",
     "folder/español/snapshots_btrfs.md",
     "folder/español/btrfs/snapshots_btrfs.md",
     "folder/español/btrfs",
     "folder/español/flatpak.md",
+    "folder/español/repositorios_arch linux.md",
     "folder/español/scrcpy.md",
     "README.md",
     "README.md~",
@@ -251,9 +240,6 @@
     "folder/español/gamescope.md",
     "folder/español/fish.md",
     "folder/español/error.md",
-    "folder/español/cambiar_la_calidad_de_audio.md",
-    "folder/español/android_tools.md",
-    "folder/español/agregar_discos_externos.md",
     "folder/español/Git.md",
     "folder/español/Davinci_resolve.md",
     "folder/español",
@@ -262,7 +248,6 @@
     "folder/Español",
     "folder",
     "documentation/documentacion.md~",
-    "documentation/README.es.md~",
-    "documentation/Español"
+    "documentation/README.es.md~"
   ]
 }
