@@ -103,7 +103,7 @@ packeges_intel_arc(){
   libva-utils intel-compute-runtime intel-gmmlib intel-gpu-tools vulkan-tools \
   mesa-utils clinfo libvpl level-zero-loader level-zero-headers ocl-icd \
   lib32-ocl-icd linux-firmware-intel fwupd vulkan-icd-loader lib32-vulkan-icd-loader \
-  vulkan-validation-layers 
+  vulkan-validation-layers lib32-libva-intel-driver
 }
 
 packeges_multimedia(){
