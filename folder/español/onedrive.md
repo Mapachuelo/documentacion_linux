@@ -36,7 +36,6 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-# Cambiamos ExecStart para incluir las exclusiones
 ExecStart=/usr/bin/rclone bisync OneDrive: %h/OneDrive \
     --config=%h/.config/rclone/rclone.conf \
     --compare size,modtime \
@@ -46,9 +45,6 @@ ExecStart=/usr/bin/rclone bisync OneDrive: %h/OneDrive \
     --exclude "PersonalVault/**" \
     --log-file=%h/.cache/rclone/bisync.log \
     --log-level INFO
-
-[Install]
-WantedBy=default.target
 ```
 
 Archivo que va actualizar el serivico ``rclone-onedrive.timer``
