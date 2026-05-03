@@ -17,7 +17,7 @@ rclone config
 ``` 
 
 
-Ya configurado sincronizar los archivos para guardarlo en el ordenador
+Sincronizar archivos y guardarlo en el ordenador
 ``` 
 rclone bisync OneDrive: ~/OneDrive --resync --progress --exclude "Personal Vault/**" --exclude "PersonalVault/**" --exclude "*{.~,tmp,bak}*"
 ```

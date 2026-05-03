@@ -5,7 +5,7 @@
 
 Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre y no se me olvide XD. 
 
-[Documentación sobre linux en español](folder/documentacion.md)
+[Documentación sobre linux en español](folder/Docs.es.md)
 
 ## Script de instalación 
 Para instalar el script, se debe ejecutar el siguiente comando en la terminal:
