@@ -3,21 +3,21 @@ Tener onedrive corriendo en segundo plano con descarga automatica.
 
 ## Paquete necesario
 App de la terminal para conectar con onedrive
-´´´
+´´´bash
 sudo pacman -S --needed rclone 
 ´´´
 Ya descargado ejecutarlo primero crear la carpeta donde se va alojar los archivos
-´´´
+´´´bash
 mkdir ~/OneDrive
 ´´´
 Y ya con ello ejecutar el rclone
-´´´
+´´´bash
 rclone config
 ´´´
 
 
 Ya configurado sincronizar los archivos para guardarlo en el ordenador
-´´´
+´´´bash
 rclone bisync OneDrive: ~/OneDrive --resync --progress --exclude "Personal Vault/**" --exclude "PersonalVault/**" --exclude "*{.~,tmp,bak}*"
 ´´´
 
