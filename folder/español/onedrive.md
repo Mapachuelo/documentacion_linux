@@ -63,3 +63,18 @@ Unit=rclone-onedrive.service
 [Install]
 WantedBy=timers.target
 ```
+
+Por último, activar los servicios:
+```
+systemctl --user enable --now rclone-onedrive.timer
+```
+
+### Verificar el funcionamiento 
+Ver si corre el timer 
+```
+systemctl --user list-timers
+```
+Si los archivos se movieron
+```
+tail -n 20 ~/.cache/rclone/bisync.log
+```
