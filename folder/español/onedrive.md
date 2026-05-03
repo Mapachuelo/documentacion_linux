@@ -3,33 +3,31 @@ Tener onedrive corriendo en segundo plano con descarga automatica.
 
 ## Paquete necesario
 App de la terminal para conectar con onedrive
-´´´bash
+``` 
 sudo pacman -S --needed rclone 
-´´´
+```
 Ya descargado ejecutarlo primero crear la carpeta donde se va alojar los archivos
-´´´bash
+```
 mkdir ~/OneDrive
-´´´
+``` 
 Y ya con ello ejecutar el rclone
-´´´bash
+``` 
 rclone config
-´´´
+``` 
 
 
 Ya configurado sincronizar los archivos para guardarlo en el ordenador
-´´´bash
+``` 
 rclone bisync OneDrive: ~/OneDrive --resync --progress --exclude "Personal Vault/**" --exclude "PersonalVault/**" --exclude "*{.~,tmp,bak}*"
-´´´
-
+```
 
 
 ## Tenerlo en segundo plano
 
-Crear un archivo en ´´.config/systemd/user/´´ para los siguientes archivos:
+Crear un archivo en ``.config/systemd/user/`` para los siguientes archivos:
 
-Archivo del servicio ´´rclone-onedrive.service´´
-´´´
-    cat .config/systemd/user/rclone-onedrive.service
+Archivo del servicio ``rclone-onedrive.service``
+```
 [Unit]
 Description=Rclone OneDrive Bisync Service
 After=network-online.target
@@ -50,10 +48,10 @@ ExecStart=/usr/bin/rclone bisync OneDrive: %h/OneDrive \
 
 [Install]
 WantedBy=default.target
-´´´
+```
 
-Archivo que va actualizar el serivico ´´rclone-onedrive.timer ´´
-´´´
+Archivo que va actualizar el serivico ``rclone-onedrive.timer``
+```
 [Unit]
 Description=Timer para sincronizar OneDrive cada 5 minutos
 
@@ -64,4 +62,4 @@ Unit=rclone-onedrive.service
 
 [Install]
 WantedBy=timers.target
-´´´
+```
