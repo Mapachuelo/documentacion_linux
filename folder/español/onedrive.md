@@ -25,7 +25,10 @@ rclone bisync OneDrive: ~/OneDrive --resync --progress --exclude "Personal Vault
 
 ## Tenerlo en segundo plano
 
-Crear un archivo en ``.config/systemd/user/`` para los siguientes archivos:
+### Tener los archivos en la nube
+
+### Tener los archivos localmente y actualización automatica
+Crear los archivo en ``.config/systemd/user/``
 
 Archivo del servicio ``rclone-onedrive.service``
 ```
@@ -67,7 +70,7 @@ systemctl --user daemon-reload
 systemctl --user enable --now rclone-onedrive.timer
 ```
 
-### Verificar el funcionamiento 
+## Verificar el funcionamiento 
 Ver si corre el timer 
 ```
 systemctl --user list-timers
