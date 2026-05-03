@@ -9,6 +9,7 @@ sudo pacman -S --needed rclone
 Ya descargado ejecutarlo primero crear la carpeta donde se va alojar los archivos
 ```
 mkdir ~/OneDrive
+mkdir -p ~/.cache/rclone
 ``` 
 Y ya con ello ejecutar el rclone
 ``` 
@@ -66,6 +67,7 @@ WantedBy=timers.target
 
 Por último, activar los servicios:
 ```
+systemctl --user daemon-reload
 systemctl --user enable --now rclone-onedrive.timer
 ```
 
