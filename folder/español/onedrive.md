@@ -66,12 +66,12 @@ WantedBy=default.target
 Por último, activar los servicios:
 ```
 systemctl --user daemon-reload
-systemctl --user enable --now rclone-onedrive.timer
+systemctl --user enable --now rclone-onedrive.service
 ```
 
 Ver si esta corriendo el servicio
 ``` 
-systemctl --user status rclone-mount.service
+systemctl --user status rclone-onedrive.service
 ```
 
 ### Tener los archivos localmente y actualización automatica
