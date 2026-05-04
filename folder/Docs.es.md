@@ -7,3 +7,5 @@ Este documento va estar guardado funciones de linux que he aprendido a lo largo 
 - [Dualboot](español/dualboot.md)
 - [Wine juegos](español/wine/wine_juegos.md)
 - [Btrfs](español/btrfs/btrfs.md)
+- [OneDrive](español/onedrive.md)
+
