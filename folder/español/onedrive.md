@@ -16,16 +16,63 @@ Y ya con ello ejecutar el rclone
 rclone config
 ``` 
 
+### Paso importante
+Hay 2 formas de tener los archivos, si online o de forma local, ud como usuario elige una de las 2 y para tenerlo en segundo plano va ser diferente el funcionamiento.
+
+Ver el funcionamiento online
+```
+rclone mount OneDrive: ~/OneDrive --vfs-cache-mode full --vfs-cache-max-age 48h --vfs-cache-max-size 4G --dir-cache-time 12h --use-mmap --umask 022 --progress
+```
 
 Sincronizar archivos y guardarlo en el ordenador
 ``` 
 rclone bisync OneDrive: ~/OneDrive --resync --progress --exclude "Personal Vault/**" --exclude "PersonalVault/**" --exclude "*{.~,tmp,bak}*"
 ```
 
-
 ## Tenerlo en segundo plano
 
 ### Tener los archivos en la nube
+Crear el archivo en ``.config/systemd/user/``
+
+Archivo del servicio ``rclone-onedrive.service``
+
+```
+[Unit]
+Description=Rclone OneDrive Online Mount
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Modo mount: No descarga nada hasta que lo abres
+ExecStart=/usr/bin/rclone mount OneDrive: %h/OneDrive \
+    --config=%h/.config/rclone/rclone.conf \
+    --vfs-cache-mode full \
+    --vfs-cache-max-age 48h \
+    --vfs-cache-max-size 4G \
+    --dir-cache-time 12h \
+    --use-mmap \
+    --umask 022 \
+    --log-level INFO
+
+# Desmontaje limpio al apagar
+ExecStop=/bin/fusermount -u %h/OneDrive
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
+```
+Por último, activar los servicios:
+```
+systemctl --user daemon-reload
+systemctl --user enable --now rclone-onedrive.timer
+```
+
+Ver si esta corriendo el servicio
+``` 
+systemctl --user status rclone-mount.service
+```
 
 ### Tener los archivos localmente y actualización automatica
 Crear los archivo en ``.config/systemd/user/``
@@ -70,8 +117,7 @@ systemctl --user daemon-reload
 systemctl --user enable --now rclone-onedrive.timer
 ```
 
-## Verificar el funcionamiento 
-Ver si corre el timer 
+Verificar el funcionamiento
 ```
 systemctl --user list-timers
 ```
