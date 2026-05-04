@@ -40,11 +40,9 @@ Archivo del servicio ``rclone-onedrive.service``
 [Unit]
 Description=Rclone OneDrive Online Mount
 After=network-online.target
-Wants=network-online.target
 
 [Service]
 Type=simple
-# Modo mount: No descarga nada hasta que lo abres
 ExecStart=/usr/bin/rclone mount OneDrive: %h/OneDrive \
     --config=%h/.config/rclone/rclone.conf \
     --vfs-cache-mode full \
@@ -54,11 +52,8 @@ ExecStart=/usr/bin/rclone mount OneDrive: %h/OneDrive \
     --use-mmap \
     --umask 022 \
     --log-level INFO
-
-# Desmontaje limpio al apagar
 ExecStop=/bin/fusermount -u %h/OneDrive
 Restart=on-failure
-RestartSec=10
 
 [Install]
 WantedBy=default.target
