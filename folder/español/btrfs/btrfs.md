@@ -4,4 +4,4 @@ Un snapshot es una imagen exacta del sistema que puede guardarla y si uno quiere
 
 Hay 2 tipos de formas de hacer un snapshot.
 - [snapshots de forma manual](snapshots_manual.md)
-- [snapshots de forma automatica](snapshots_automatica.md)
+- [snapshots de forma automatica](snapshots_automatico.md)
