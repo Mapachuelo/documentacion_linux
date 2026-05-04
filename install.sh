@@ -160,7 +160,6 @@ packeges_flatpak(){
   echo "Instalando aplicaciones de flatpak"
   flatpak install --noninteractive --assumeyes \
   com.github.tchx84.Flatseal \
-  com.usebottles.bottles \
   com.github.unrud.VideoDownloader \
   com.vysp3r.ProtonPlus \
   it.mijorus.gearlever \
