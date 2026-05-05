@@ -26,3 +26,8 @@ chmod +x install.sh
 
 ## Ver localmente
 Se requiere utilizar una app llamada `obsidian` para visualizar el contenido de este repositorio. Para ello, se debe clonar el repositorio y abrirlo con la aplicación.
+
+Instalación 
+```
+sudo pacman -S --needed obsidian
+```
