@@ -4,6 +4,11 @@
 </p>
 
 Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre y no se me olvide XD. 
+Solo tiene soporte para: 
+- Arch linux.
+
+Graficas:
+- Intel arc.
 
 [Documentación sobre linux en español](folder/Docs.es.md)
 
