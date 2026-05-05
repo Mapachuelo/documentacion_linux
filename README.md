@@ -4,6 +4,7 @@
 </p>
 
 Estoy recopilando cosas que he aprendido utilizando linux, para tenerlos siempre y no se me olvide XD. 
+
 Solo tiene soporte para: 
 - Arch linux.
 
